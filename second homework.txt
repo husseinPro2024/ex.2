@@ -1,0 +1,156 @@
+# first homework 
+#def calculatesFactorial(n) :
+#   product=1
+#   sumletters=""
+#   for i in range (1,n+1) :
+#      product*=i
+#      sumletters+="*"+str(i)
+#   if n==1 or n==0  :
+#       print("Output:1")
+#   else :
+#       print("Output:",product,"(",sumletters,")")
+#x=0
+#while True :
+# x=int(input ("Input:"))
+# if x>=0 :
+#   break
+# else:
+#    print("you cant enter negative number ")
+#calculatesFactorial(x)
+
+
+#homework2 
+#def divisors(n):
+#    div ="1"
+#    for i in range (2,n+1):
+#        if (n%i==0) :
+#           div+=","+str(i)
+#    print("Output:[",div,"]")
+#x=int(input("Input:"))
+#divisors(x)
+
+#homework3
+#def reverseString(input):
+#    n=""
+#    for i in range(len(input)-1,-1,-1) :
+#       n+=input[i]
+#    return n
+#x=input("Input:")
+#print("Output:",reverseString(x))
+
+#homework 4
+#list=[]
+#evenList=[]
+#def containingEven (n):
+#    for i in range(0,x) :
+#        if list[i]%2==0 :
+#           evenList.append(list[i])
+#    return evenList
+       
+#x=int(input("Enter size of list:"))
+#print("Input:[")
+#for i in range(0,x) :
+#  nb=int(input())
+#  list.append(nb)
+#print("]")
+#even=containingEven(list)
+#print("Output:[")
+#for i in even:
+#    print(i)
+#print("]")
+
+#homework 5
+#def check(password):
+#    lower = False
+#    upper = False
+#    digit = False
+#    character = False
+#    for i in range(len(password)):  
+#        if password[i].islower():
+#            lower = True
+#        elif password[i].isupper():
+#            upper = True
+#        elif password[i].isdigit():
+#            digit = True
+#        elif  password[i]=='#' or password[i]=='?' or password[i]=='!' or password[i]=='$':
+#            character=True
+#    if lower and upper and digit and character:
+#        print("Output: Strong password")
+#    else:
+#        print("Output: Weak password")
+       
+#password = input("Input: ")
+#check(password)
+
+#homework6 
+#def checks(IPv4): 
+#    count = 0  
+#   allCount = 0   
+#    while allCount < len(IPv4): 
+#        status = check(IPv4, allCount)
+#        if not status:
+#            return False
+#        status, address, allCount = countes(IPv4, allCount)
+#        if not status:
+#            return False
+#        if not checknb(address):
+#            return False  
+#        count += 1
+#        if count > 4:
+#            print("Extra period")
+#            return False
+#    if count != 4:
+#        print("Missing octet")
+#        return False
+
+#    return True
+
+#def check(IPv4, allCount):
+#    if IPv4[allCount] == '.':
+#        if allCount == 0 or IPv4[allCount - 1] == '.':
+#            print("Consecutive periods")
+#            return False
+#    elif IPv4[allCount] == '0' and (allCount == 0 or IPv4[allCount - 1] == '.'):
+#        if allCount + 1 < len(IPv4) and IPv4[allCount + 1].isdigit():
+#            print("Leading zero in octet")
+#            return False
+#    elif IPv4[allCount] == '-':
+#        print("Negative number ")
+#        return False
+#    elif not ('0' <= IPv4[allCount] <= '9') and IPv4[allCount] != '.':
+#        print("Invalid character ",IPv4[allCount])
+#        return False
+    
+#    return True
+
+#def countes(IPv4, allCount):
+ #   address = ""
+    
+  #  while allCount < len(IPv4) and IPv4[allCount] != '.':
+   #     if not ('0' <= IPv4[allCount] <= '9'):
+   #         print(f"Invalid character in octet '{IPv4[allCount]}'")
+   #         return False, "", allCount  
+   #     address += IPv4[allCount]
+    #    allCount += 1
+    
+    #if len(address) > 3:
+    #    print("Octet value too large")
+    #    return False, "", allCount  
+    
+   # return True, address, allCount + 1  
+
+#def checknb(address):
+#    address = int(address)
+ #   if 0 <= address <= 255:
+#        return True
+#    else:
+#        print("Octet value out of range ")
+#        return False
+
+#x = input("Input IPv4 address: ")
+#is_valid = checks(x)
+
+#if is_valid:
+##    print("Valid IPv4 address")
+#else:
+#    print("Invalid IPv4 address")
